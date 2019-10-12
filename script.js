@@ -1,18 +1,24 @@
 //In my HTML I'll need div that will hold the time table
-//I div or header that shows the current day
+//A div or header that shows the current day
   //js has a DateObject() built in
-
   var d = new Date();
-  var dayIndex = d.getDay();
   var date = d.getDate();
-
+  var dayIndex = d.getDay();
+  
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  var today = days[dayIndex];
 
-  var currentDay = days[dayIndex];
-  $("#today").html(currentDay);
+  var monthIndex = d.getMonth();
+  
+  var allMonths = ["January",
+    "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var month = allMonths[monthIndex];
+  var year = d.getFullYear();
+ 
+  $("#today").html(today +" " + month +" " + date + ", " + year);
 
-  console.log(currentDay);
-  console.log(date);
+  console.log(year);
+  console.log(month);
 
 //Input fields inside the div for the eight hours in the day
   //When the page loads, check local storage,
