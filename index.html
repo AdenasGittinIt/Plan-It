@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Plan-It!</title>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body>
-  <header id="today">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plan It!</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
 
-  </header>
-  <div id="hours">
-    <label for="9am">9:00 AM</label>
-    <input type="text" id="9am" placeholder="9:00 AM" name="9am"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="10am">10:00 AM</label>
-    <input type="text" id="10am" placeholder="10:00 AM" name="10am"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="11am">11:00 AM</label>
-    <input type="text" id="11am" placeholder="11:00 AM" name="11am"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="12pm">12:00 PM</label>
-    <input type="text" id="12pm" placeholder="12:00 PM" name="12pm"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="1pm">1:00 PM</label>
-    <input type="text" id="1pm" placeholder="1:00 PM" name="1pm"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="2pm">2:00 PM</label>
-    <input type="text" id="2pm" placeholder="2:00 PM" name="2pm"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="3pm">3:00 PM</label>
-    <input type="text" id="3pm" placeholder="3:00 PM" name="3pm"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="4pm">4:00 PM</label>
-    <input type="text" id="4pm" placeholder="4:00 PM" name="4pm"></input>
-    <button style="display: block;">save</button>
-    <br>
-    <label for="5pm">5:00 PM</label>
-    <input type="text" id="5pm" placeholder="5:00 PM" name="5pm"></input>
-    <button style="display: block;">save</button>
-  </div>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.js"
-  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-  crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <body>
+    <header id="today"></header>
+    <div class="wrapper">
+      <div id="hours-table">
+        <label for="9am">9:00 AM</label>
+        <input type="text" id="9am" class="hour-input" placeholder="9:00 AM" name="9am"></input>
+        <button for="9am" class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="10am">10:00 AM</label>
+        <input type="text" id="10am" class="hour-input" placeholder="10:00 AM" name="10am"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="11am">11:00 AM</label>
+        <input type="text" id="11am" class="hour-input" placeholder="11:00 AM" name="11am"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="12pm">12:00 PM</label>
+        <input type="text" id="12pm" class="hour-input" placeholder="12:00 PM" name="12pm"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="1pm">1:00 PM</label>
+        <input type="text" id="1pm" class="hour-input" placeholder="1:00 PM" name="1pm"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="2pm">2:00 PM</label>
+        <input type="text" id="2pm" class="hour-input" placeholder="2:00 PM" name="2pm"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="3pm">3:00 PM</label>
+        <input type="text" id="3pm" class="hour-input" placeholder="3:00 PM" name="3pm"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="4pm">4:00 PM</label>
+        <input type="text" id="4pm" class="hour-input" placeholder="4:00 PM" name="4pm"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+        <br>
+        <label for="5pm">5:00 PM</label>
+        <input type="text" id="5pm" class="hour-input" placeholder="5:00 PM" name="5pm"></input>
+        <button class="button" style="display: block;">Schedule it!</button>
+      </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
-</body>
+  </body>
 </html>
+
+  <!-- <table>
+    <thead>
+      <tr>
+        <th scope="col" colspan="3" id="today"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+  </table>     -->
