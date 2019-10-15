@@ -1,4 +1,4 @@
-# Plan-It
+# Plan It!
 An interactive, calendar based, to do list.
 
 User Story
