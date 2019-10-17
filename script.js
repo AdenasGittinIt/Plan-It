@@ -8,6 +8,7 @@ var timeNow = hour + ":" + minutes;
 console.log(timeNow);
   
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
 var today = days[dayIndex];
 
 var monthIndex = d.getMonth();
@@ -15,29 +16,43 @@ var allMonths = ["January", "February", "March", "April", "May", "June", "July",
 
 var month = allMonths[monthIndex];
 var year = d.getFullYear();
-var inputArray = $(".hour-input");
 
 $("#today").text(today +" " + month +" " + date + ", " + year);
-  
+ 
+var apptInput = $(".hour-input");
+var apptCount = 0
+var appointments = ["",  "", "",  "",  "",  "",  "",  "",  ""];
 
-// $().ready(function() {
-//   for (i = 0; i < inputArray.length; i++) {
-//     var appointment = localStorage.getItem("appt");
-//     inputArray[i].value appointment
-//   }
-// });
+//when the page loads get the items from local storage and display them on the page
 
-//I'll need a function to capture the user input and saving it in local storage
-//each input field will need it's own save button
+$().ready(function() {
+  var storedAppts = JSON.parse(localStorage.getItem("appts"));
+  if (storedAppts!== null) {
+    appointments = storedAppts
+  }
+  console.log(storedAppts);
+  // appointments.splice(i, 1, apptInput[i].value)
+});
 
-  $(".button").click(function(e) {
-  for (i = 0; i < inputArray.length; i++) {
-    localStorage.setItem("appt", inputArray[i].value);
-  };
-  
-  console.log(inputArray);
 
+function keepAppts() {
+  localStorage.setItem("appts", JSON.stringify(appointments));
+}
+
+
+$(".button").click(function(event) {
+  event.preventDefault();
+
+    for (var i = 0; i < appointments.length; i++) {
+
+      //put the value of the input in the appointments array and set the value of each element in the appointments array equal to the input text
+      appointments.splice(i, 1, apptInput[i].value)
+    }    
+    //then save it to local storage
+    console.log(appointments); 
+    keepAppts();  
   });
+  
    
 
 
@@ -47,3 +62,4 @@ $("#today").text(today +" " + month +" " + date + ", " + year);
 
 //A conditional statment.
 // if the div id is greater than or equal to the time style background color green else color grey
+// do this in a loop

@@ -5,3 +5,6 @@
 
 //When the page loads, check local storage,
 //if appointments exists, load it into the corresponding time slot
+
+//I'll need a function to capture the user input and saving it in local storage
+//each input field will need it's own save button

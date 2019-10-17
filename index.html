@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Plan It!</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Plan It! Work Day Scheduler</title>
   </head>
 
   <body>
-    <header id="today"></header>
-    <div class="wrapper">
+    <header class="jumbotron">
+      <h1 class="display-3">Plan It! Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="today" class="lead"></p>
+    </header>
+    <div class="container">
       <div id="hours-table">
-        <label for="9am">9:00 AM</label>
+        <label for="9am">09:00 AM</label>
         <input type="text" id="9am" class="hour-input" placeholder="9:00 AM"></input>
         <button for="9am" class="button">Schedule it!</button>
         <br>
@@ -28,42 +46,29 @@
         <input type="text" id="12pm" class="hour-input" placeholder="12:00 PM"></input>
         <button class="button">Schedule it!</button>
         <br>
-        <label for="1pm">1:00 PM</label>
+        <label for="1pm">01:00 PM</label>
         <input type="text" id="1pm" class="hour-input" placeholder="1:00 PM"></input>
         <button class="button">Schedule it!</button>
         <br>
-        <label for="2pm">2:00 PM</label>
+        <label for="2pm">02:00 PM</label>
         <input type="text" id="2pm" class="hour-input" placeholder="2:00 PM"></input>
         <button class="button">Schedule it!</button>
         <br>
-        <label for="3pm">3:00 PM</label>
+        <label for="3pm">03:00 PM</label>
         <input type="text" id="3pm" class="hour-input" placeholder="3:00 PM"></input>
         <button class="button">Schedule it!</button>
         <br>
-        <label for="4pm">4:00 PM</label>
+        <label for="4pm">04:00 PM</label>
         <input type="text" id="4pm" class="hour-input" placeholder="4:00 PM"></input>
         <button class="button">Schedule it!</button>
         <br>
-        <label for="5pm">5:00 PM</label>
+        <label for="5pm">05:00 PM</label>
         <input type="text" id="5pm" class="hour-input" placeholder="5:00 PM"></input>
         <button class="button">Schedule it!</button>
-      </div>
     </div>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.slim.js"
-    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-    crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
-
-  <!-- <table>
-    <thead>
-      <tr>
-        <th scope="col" colspan="3" id="today"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-  </table>     -->
